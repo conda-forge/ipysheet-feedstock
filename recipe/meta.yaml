@@ -1,5 +1,5 @@
 {% set name = "ipysheet" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7af431f31f64141099168e2a78310a6039022896d728e07a4e1b3e58e4ab6df6
+  sha256: 5dfca159a204d87f2a626dc5ddf8cb023722c6715777e12cb776a714f9e9d1a2
 
 build:
   number: 0
@@ -41,3 +41,4 @@ extra:
   recipe-maintainers:
     - SylvainCorlay
     - MaartenBreddels
+    - martinRenou

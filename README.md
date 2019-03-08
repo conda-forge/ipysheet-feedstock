@@ -115,4 +115,5 @@ Feedstock Maintainers
 
 * [@MaartenBreddels](https://github.com/MaartenBreddels/)
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
+* [@martinRenou](https://github.com/martinRenou/)
 
