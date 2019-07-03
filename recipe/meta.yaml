@@ -1,5 +1,5 @@
 {% set name = "ipysheet" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 918c04590db6a448f50f005bc12d13cea25f2d81936709d1b97026520ff65c60
+  sha256: 66046205b4f10b5f8f79b9fca59b1d3a8d921f65bdff0f3315bc988fea2bb093
 
 build:
   number: 0
