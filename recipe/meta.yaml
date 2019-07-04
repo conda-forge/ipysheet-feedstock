@@ -10,7 +10,7 @@ source:
   sha256: 66046205b4f10b5f8f79b9fca59b1d3a8d921f65bdff0f3315bc988fea2bb093
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python
-    - ipywidgets>=7.0.0,<8.0
+    - ipywidgets>=7.5.0,<8.0
     - pscript
 
 test:
