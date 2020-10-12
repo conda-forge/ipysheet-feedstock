@@ -10,7 +10,7 @@ source:
   sha256: 54e9dffb4384db8586d3ca6be6fd5679157f6cf98ecc9ad368fa938f889e58b2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -36,7 +36,7 @@ about:
   summary: 'Spreadsheet widget for Jupyter'
   description: 'Spreadsheet widget for Jupyter'
   dev_url: https://github.com/QuantStack/ipysheet
-  dev_url: https://github.com/QuantStack/ipysheet
+  doc_url: https://ipysheet.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:

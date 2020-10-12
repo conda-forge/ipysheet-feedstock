@@ -5,9 +5,13 @@ Home: http://github.com/QuantStack/ipysheet
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipysheet-feedstock/blob/master/LICENSE.txt)
 
 Summary: Spreadsheet widget for Jupyter
+
+Development: https://github.com/QuantStack/ipysheet
+
+Documentation: https://ipysheet.readthedocs.io/en/latest/
 
 Spreadsheet widget for Jupyter
 
