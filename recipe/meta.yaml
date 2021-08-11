@@ -1,5 +1,5 @@
 {% set name = "ipysheet" %}
-{% set version = "0.4.4" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,26 +7,34 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 54e9dffb4384db8586d3ca6be6fd5679157f6cf98ecc9ad368fa938f889e58b2
+  sha256: 714804a9e6e7e413ef8e74fce026587239a853c3912060c2fcf5f8dce0b7db6c
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python  >=3.6
     - setuptools
     - pip
+    - jupyter-packaging
   run:
-    - python
+    - python  >=3.6
     - ipywidgets >=7.5.0,<8.0
     - pscript
 
 test:
   imports:
     - ipysheet
+  commands:
+    - test -f ${PREFIX}/share/jupyter/nbextensions/ipysheet/extension.js                             # [unix]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/ipysheet/index.js                                 # [unix]
+    - test -f ${PREFIX}/share/jupyter/labextensions/ipysheet/package.json                            # [unix]
+    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\ipysheet\\extension.js (exit 1)           # [win]
+    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\ipysheet\\index.js (exit 1)               # [win]
+    - if not exist %PREFIX%\\share\\jupyter\\labextensions\\ipysheet\\package.json (exit 1)          # [win]
 
 about:
   home: http://github.com/QuantStack/ipysheet
